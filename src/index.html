@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MI6 Agent's interface</title>
+
+    <link rel="stylesheet" href="style.scss">
+  </head>
+  <body>
+    <nav class="sidenav">
+      <div class="sidenav__content">
+        <img src="/mi6-seal.png" alt="seal" class="sidenav__image">
+        <ul class="sidenav__links">
+          <li class="sidenav__link sidenav__link_active"><a href="#">Home</a></li>
+          <li class="sidenav__link"><a href="#">People of interest</a></li>
+        </ul>
+      </div>
+      <span class="sidenav__arrow"></span>
+    </nav>
+
+    <main>
+      <h1>Welcome to MI6</h1>
+    </main>
+     
+    <script>
+      let sidenav = document.querySelector('.sidenav');
+      let arrow_span = sidenav.querySelector('.sidenav__arrow');
+      arrow_span.addEventListener('click', () => {
+        sidenav.classList.toggle('sidenav_closed')
+        arrow_span.classList.toggle('sidenav__arrow_closed')
+      })
+    </script>
+
+  </body>
+</html>
